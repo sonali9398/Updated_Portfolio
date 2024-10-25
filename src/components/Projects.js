@@ -34,7 +34,7 @@ export const Projects = () => {
     },
     {
       title: "Sushi Restaurant Website",
-      projectUrl: "sushi-chi-two.vercel.app",
+      projectUrl: "https://sushi-wngf.vercel.app/",
       imgUrl: js,
       description:"A Sushi Restaurant website landing page display menu and restaurant information."
     },
