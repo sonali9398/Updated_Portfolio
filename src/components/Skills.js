@@ -39,27 +39,27 @@ export const Skills = () => {
                         <p>Possess proficiency in essential Front-end & Back-end technologies, enabling me to build dynamic and efficient applications.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={react} alt="Image" />
+                                <img src={react} alt="react" />
                                 <h5>React</h5>
                             </div>
                             <div className="item">
-                                <img src={js} alt="Image" />
+                                <img src={js} alt="js" />
                                 <h5>JavaScript</h5>
                             </div>
                             <div className="item">
-                                <img src={node} alt="Image" />
+                                <img src={node} alt="node" />
                                 <h5>NodeJs</h5>
                             </div>
                             <div className="item">
-                                <img src={express} alt="Image" />
+                                <img src={express} alt="express" />
                                 <h5>ExpressJs</h5>
                             </div>
                             <div className="item">
-                                <img src={sql} alt="Image" />
+                                <img src={sql} alt="sql" />
                                 <h5>SQL</h5>
                             </div>
                             <div className="item">
-                                <img src={html} alt="Image" />
+                                <img src={html} alt="html" />
                                 <h5>HTML/CSS</h5>
                             </div>
                         </Carousel>
@@ -67,7 +67,7 @@ export const Skills = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="left" />
     </section>
   )
 }

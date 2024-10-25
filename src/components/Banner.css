@@ -96,7 +96,7 @@
     top: 25%;
     right: 10%;
     transform: translate(0, -50%);
-    background-image: url("D:\Sonali\Z\web-dev-projects-main\web-dev-projects-main\personal-portfolio\src\assets\img\shared-image.jpg");
+    background-image: url("../assets/img/shared-image.jpg");
     background-size: cover; /* Ensures the image covers the entire box */
     background-position: center; /* Centers the image in the box */
     background-repeat: no-repeat;
@@ -136,7 +136,7 @@
 .content {
     position: relative;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   
   #page1 {
@@ -146,6 +146,7 @@
     width: 100%; 
     position: relative;
     /* animation: slide-left 15s linear infinite;  */
+    
   }
   
   #page1::-webkit-scrollbar {
@@ -168,10 +169,97 @@
   
   @keyframes scroll {
     from {
-      left:100%
+        transform: translateX(100%); /* Start from outside the right */
     }
     to {
-      left: calc(var(--width) * -1)
+        transform: translateX(-100%); /* End outside the left */
     }
-  }
+}
+
+
+  /* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    #text-div {
+        width: 100%;
+        left: 0;
+        top: 10%;
+        height: auto;
+    }
+    #text-div > h1 {
+        font-size: 60px;
+    }
+    #small-img {
+        width: 250px;
+        height: 350px;
+    }
+    #vertical h1 {
+        font-size: 60px;
+    }
+    
+}
+
+@media (max-width: 992px) {
+    #main {
+        flex-direction: column;
+        height: auto;
+    }
+    #part1, #part3 {
+        width: 100%;
+        height: 50px;
+    }
+    #part2 {
+        width: 100%;
+        height: 400px; /* Adjust height for smaller screens */
+    }
+    #text-div {
+        top: 5%;
+    }
+    #small-img {
+        width: 200px;
+        height: 300px;
+        top: 10%;
+    }
+    #vertical h1 {
+        font-size: 50px;
+    }
+    #page1 > h1{
+        font-size: 50px;
+    }
+    .content {
+        height: 150px; /* Reduce height for medium screens */
+    }
+
+    #page1 h1 {
+        font-size: 40px; /* Slightly smaller font size for medium screens */
+        margin-right: 30px; /* Adjust spacing for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    #text-div > h1 {
+        font-size: 40px;
+    }
+    #small-img {
+        width: 110px;
+        height: 200px;
+        top: 15%;
+    }
+    #vertical h1 {
+        font-size: 40px;
+    }
+    .content {
+        height: 120px; /* Further reduce height for smaller screens */
+    }
+
+    #page1 {
+        flex-direction: column; /* Stack headings vertically on small screens */
+        align-items: center; /* Center the text */
+    }
+
+    #page1 h1 {
+        font-size: 20px; /* Smaller font size for mobile screens */
+        margin: 5px 0; /* Adjust spacing for mobile */
+        white-space: normal; /* Allow text to wrap */
+    }
+}
   

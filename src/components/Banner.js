@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import './Banner.css';
-import './NewBanner.css'
+import './NewBanner.css';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -55,11 +55,10 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility once={false} partialVisibility>
               {({ isVisible }) => {
-                // This will reset the animation class each time the section becomes visible
                 if (isVisible) {
                   setTimeout(() => setAnimateClass('animate__fadeIn'), 0);
                 } else {
-                  setTimeout(() => setAnimateClass(''), 0); // Reset animation when out of view
+                  setTimeout(() => setAnimateClass(''), 0);
                 }
                 return (
                   <div className={`animate__animated ${animateClass}`}>
@@ -87,14 +86,20 @@ export const Banner = () => {
               }}
             </TrackVisibility>
           </Col>
-          <div className="content" style={{ "--quantity": 4 }}> 
-            <div id="page1">
-              <h1 style={{ "--position": 1 }}>React Frontend Developer</h1>
-              <h1 style={{ "--position": 2 }}>Full Stack Developer</h1>
-              <h1 style={{ "--position": 3 }}>Web Developer</h1>
-              <h1 style={{ "--position": 4 }}>GenAi Enthusiast</h1>
+        </Row>
+
+        {/* Separate section for scrolling text */}
+        <Row>
+          <Col>
+            <div className="content" style={{ "--quantity": 4 }}> 
+              <div id="page1">
+                <h1 style={{ "--position": 1 }}>React Frontend Developer</h1>
+                <h1 style={{ "--position": 2 }}>Full Stack Developer</h1>
+                <h1 style={{ "--position": 3 }}>Web Developer</h1>
+                <h1 style={{ "--position": 4 }}>GenAi Enthusiast</h1>
+              </div>
             </div>
-          </div>
+          </Col>
         </Row>
       </Container>
     </section>

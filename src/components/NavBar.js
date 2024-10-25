@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/newlogo.jpg';
 import slogo from '../assets/img/Preview.png'
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import { HashLink } from 'react-router-hash-link';
 import icon from '../assets/img/icon.svg';
+import resumePDF from '../assets/img/Sonali_FullStack.pdf';
+import resume from '../assets/img/resume.svg'
+
+
 import {
   BrowserRouter as Router
 } from "react-router-dom";
@@ -55,6 +58,10 @@ export const NavBar = () => {
                 <a href="https://in.linkedin.com/in/sonali-karangutkar" target="blank"><img src={navIcon1} alt="" /></a>
                 <a href="https://github.com/sonali9398" target="blank"><img src={icon} alt="" /></a>
                 <a href="https://www.instagram.com/sonali_karangutkar/" target="blank"><img src={navIcon3} alt="" /></a>
+                <a href={resumePDF} download="Sonali_Karangutkar_Resume.pdf" className="resume-download">
+                  <img src={resume} alt="resume" />
+                </a>
+
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
