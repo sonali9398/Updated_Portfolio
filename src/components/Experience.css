@@ -1,0 +1,33 @@
+/* /* Experience.css or your component CSS file */
+
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotateGradient {
+  animation: rotateGradient 4s linear infinite; /* Default speed */
+}
+
+.card {
+  position: relative; /* For pseudo-element positioning */
+  border-radius: 1rem; /* Rounded corners */
+  background-color: #282828; /* Card background */
+  padding: 1rem; /* Padding for card content */
+  overflow: hidden; /* Prevent overflow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Basic shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Transition for hover shadow */
+  animation: animate-rotateGradient 4s linear infinite;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+}
+
+.card:hover::before {
+  animation: rotateGradient 2s linear infinite; /* Speed up on hover */
+}

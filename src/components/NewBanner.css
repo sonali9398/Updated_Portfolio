@@ -1,0 +1,70 @@
+.content {
+    --quantity: 4; /* Number of items */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    overflow: hidden; /* Hide the overflow to prevent scrolling */
+    background-color: #1c1c1c51; /* Optional: Add a background color for contrast */
+  }
+  
+  #page1 {
+    position: relative;
+    width: 100vw; /* Full viewport width for horizontal scrolling */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #page1 h1 {
+    position: absolute;
+    opacity: 0;
+    font-size: 6em; /* Large font size for visual appeal */
+    color: #fff; /* White text for contrast */
+    text-shadow: 2px 2px 5px rgba(19, 19, 19, 0.7); /* Add text shadow for depth */
+    animation: snakeMove 8s infinite ease-in-out; /* Infinite horizontal scroll */
+  }
+  
+  /* Set different delays for each h1 element to stagger the animation */
+  #page1 h1:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  #page1 h1:nth-child(2) {
+    animation-delay: 2s;
+  }
+  
+  #page1 h1:nth-child(3) {
+    animation-delay: 4s;
+  }
+  
+  #page1 h1:nth-child(4) {
+    animation-delay: 6s;
+  }
+  
+  /* Keyframes for snake-like movement */
+  @keyframes snakeMove {
+    0% { 
+      opacity: 0;
+      transform: translateX(50%); /* Start off-screen on the right */
+    }
+    10% { 
+      opacity: 1;
+      transform: translateX(0); /* Fade in and move into view */
+    }
+    25% { 
+      opacity: 1; 
+      transform: translateX(0); /* Stay visible in the center */
+    }
+    35% { 
+      opacity: 0;
+      transform: translateX(-50%); /* Fade out and move off-screen to the left */
+    }
+    100% { 
+      opacity: 0;
+      transform: translateX(-50%); /* Stay off-screen on the left */
+    }
+  }
+  
