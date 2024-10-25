@@ -13,12 +13,12 @@ import resumePDF from '../assets/img/Sonali_FullStack.pdf';
 export const Footer = () => {
   return (
     <footer className="footer">
-      <Container>
-        <Row className="align-items-center">
-          <Col>
+      <Container >
+        <div className="flex justify-between">
+          <div className="">
             <img src={slogo} alt="Logo" className="footerlogo" />
-          </Col>
-          <Col size={12} sm={6} className="text-center text-sm-end">
+          </div>
+          <div size={12} sm={6} className="text-center text-sm-end flex justify-end">
             <div className="social-icon">
               <a href="https://in.linkedin.com/in/sonali-karangutkar" target="_blank" rel="noopener noreferrer">
                 <img src={navIcon1} alt="LinkedIn" />
@@ -34,8 +34,8 @@ export const Footer = () => {
                 <img src={resume} alt="resume" />
               </a>
             </div>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Container>
     </footer>
   );

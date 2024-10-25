@@ -71,12 +71,12 @@ export const Projects = () => {
                 <h2>Projects</h2>
                 <p>Below are the projects developed using React, JavaScript, and Generative AI (GenAI). Each project showcases innovative applications and solutions leveraging these technologies to enhance user experience and functionality.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center " id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">React </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Javascript</Nav.Link>
+                      <Nav.Link eventKey="second">JS</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">GenAi</Nav.Link>

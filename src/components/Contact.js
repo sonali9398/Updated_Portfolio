@@ -31,12 +31,7 @@ export const Contact = () => {
     setButtonText('Sending...');
 
     emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID, 
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
-        form.current, 
-        process.env.REACT_APP_EMAILJS_USER_ID
-      )
+    .sendForm('service_2smf7f9', 'template_fa8kp78', form.current, 'POs2TuA9DK7WzvYhB')
       .then(
         (result) => {
           console.log('SUCCESS!', result.text);

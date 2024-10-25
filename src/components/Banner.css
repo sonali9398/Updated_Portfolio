@@ -133,7 +133,7 @@
     -webkit-text-stroke: 1px black;
 }
 
-.content {
+#content {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -177,7 +177,7 @@
 }
 
 
-  /* Media Queries for Responsive Design */
+/* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
     #text-div {
         width: 100%;
@@ -195,7 +195,6 @@
     #vertical h1 {
         font-size: 60px;
     }
-    
 }
 
 @media (max-width: 992px) {
@@ -215,51 +214,46 @@
         top: 5%;
     }
     #small-img {
-        width: 200px;
-        height: 300px;
-        top: 10%;
+        display: none;
     }
     #vertical h1 {
         font-size: 50px;
     }
-    #page1 > h1{
+    #page1 > h1 {
         font-size: 50px;
     }
     .content {
-        height: 150px; /* Reduce height for medium screens */
+        height: auto; /* Allow the content to grow */
     }
 
-    #page1 h1 {
-        font-size: 40px; /* Slightly smaller font size for medium screens */
-        margin-right: 30px; /* Adjust spacing for medium screens */
-    }
 }
+
+
 
 @media (max-width: 576px) {
     #text-div > h1 {
-        font-size: 40px;
+        font-size: 30px; /* Further reduce font size */
     }
+    
     #small-img {
-        width: 110px;
-        height: 200px;
-        top: 15%;
-    }
+    display: none; /* Hide the small-img element on small devices */
+  }
+    
     #vertical h1 {
-        font-size: 40px;
+        font-size: 30px; /* Reduce font size for smaller screens */
     }
-    .content {
-        height: 120px; /* Further reduce height for smaller screens */
+    
+    #content {
+        display: flex;
     }
 
     #page1 {
-        flex-direction: column; /* Stack headings vertically on small screens */
-        align-items: center; /* Center the text */
-    }
-
-    #page1 h1 {
-        font-size: 20px; /* Smaller font size for mobile screens */
-        margin: 5px 0; /* Adjust spacing for mobile */
-        white-space: normal; /* Allow text to wrap */
+        display: flex;
+        white-space: wrap; 
+        overflow: hidden; 
+        height: 100%;
+        width: 100%; 
+        font-size: 9px;
+        position: relative;
     }
 }
-  

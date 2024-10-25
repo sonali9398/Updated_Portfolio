@@ -94,9 +94,7 @@ nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
-nav.navbar a.navbar-brand {
-    width: 9%;
-}
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
@@ -108,18 +106,6 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
-}
-
-
-
-@media (min-width: 576px) {
-  .navbar-collapse {
-      display: flex !important; /* Show navbar links on larger devices */
-  }
-
-  .navbar-toggler {
-      display: none; /* Hide the hamburger icon on larger devices */
-  }
 }
 
 span.navbar-text {
@@ -242,7 +228,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
-
 
 /************ Banner Css ************/
 .banner {
@@ -566,6 +551,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+@media (max-width: 576px) {
+  .footer  {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+  }
+
+  .social-icon {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footerlogo{
+    display: flex;
+    justify-content: space-around;
+  }
+
+}
 .newsletter-bx {
   background: #FFFFFF;
   border-radius: 55px;
@@ -627,7 +633,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 18px;
 }
 .footer img {
-  width: 26%;
+  width: 100%;
 }
 .footer p {
   font-weight: 400;
@@ -652,7 +658,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .footerlogo{
   height: 60px;               /* Set your desired height */
-  /* width: 40px;  */
+  width: 40px; 
   max-width: 60px;               /* Maintain aspect ratio */
   border-radius: 12px;        /* Slightly round corners */
   transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
@@ -662,6 +668,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transform: scale(1.05);     /* Slightly enlarge on hover */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
 }
+
+@media (max-width: 767px) {
+  .footer  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* .social-icon {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  } */
+}
+
 .view-project-link {
   display: inline-block; /* Makes the link block-level */
   margin-top: 10px;     /* Space above the link */
@@ -693,6 +715,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .owl-carousel .item h5 {
   margin: 0; /* Remove default margin */
   text-align: center; /* Center text below the image */
+}
+
+/* Media Queries for Small Devices */
+@media (max-width: 576px) {
+  .owl-carousel .item {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  .owl-carousel .item img {
+    height: 60px; /* Adjust height for smaller screens */
+    width: 60px; /* Adjust width for smaller screens */
+    margin-bottom: 5px; /* Reduce space between image and text */
+  }
+
+  .owl-carousel .item h5 {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+  .logo img{
+    width: 100%;
+  }
 }
 
 

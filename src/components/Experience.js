@@ -6,7 +6,7 @@ import './Experience.css';
 export const Experience = () => {
   return (
     <section className="experience" id="experience">
-    <div className="py-20 w-full">
+      <div className="py-20 w-full">
           <h1 className="heading text-center mb-6 font-bold text-5xl">
             My <span className="text-purple-600">Work Experience</span>
           </h1>

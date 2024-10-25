@@ -77,9 +77,7 @@ export const Banner = () => {
                       <div id="small-img">
                         <div id="overlay"></div>
                       </div>
-                      <div id="vertical">
-                        <h1 id="rotating-text" className="wrap">{text || "Web Developer"}</h1>
-                      </div>
+                      
                     </div>
                   </div>
                 );
@@ -91,7 +89,7 @@ export const Banner = () => {
         {/* Separate section for scrolling text */}
         <Row>
           <Col>
-            <div className="content" style={{ "--quantity": 4 }}> 
+            <div className="content" id="content" style={{ "--quantity": 4 }}> 
               <div id="page1">
                 <h1 style={{ "--position": 1 }}>React Frontend Developer</h1>
                 <h1 style={{ "--position": 2 }}>Full Stack Developer</h1>
