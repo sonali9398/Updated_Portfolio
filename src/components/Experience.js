@@ -28,7 +28,7 @@ export const Experience = () => {
                     className="h-32 w-32 rounded-full"
                   />
                   <h1 className="text-center text-xl md:text-2xl font-bold">{card.title}</h1>
-                  <ul className="text-center text-white mt-3">
+                  <ul className=" text-start text-white mt-3">
                     {Array.isArray(card.desc) ? (
                       card.desc.map((item, index) => (
                         <li key={index} className="mt-1">
